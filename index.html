@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Exo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- preloaders -->
+
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" as="style" onload="this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,800|Roboto:300,900" rel="preload" onload="this.rel='stylesheet'" as="style">
+    <!-- stylesheets -->
+
+    <noscript><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"></noscript>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,500,800|Roboto:300,900"></noscript>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+    <script>
+
+      //load font awesome and google fonts without blocking rendering
+
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        ! function(a) {
+	"use strict";
+	var b = function(b, c, d) {
+		function j(a) {
+			if (e.body) return a();
+			setTimeout(function() {
+				j(a)
+			})
+		}
+
+		function l() {
+			f.addEventListener && f.removeEventListener("load", l), f.media = d || "all"
+		}
+		var g, e = a.document,
+			f = e.createElement("link");
+		if (c) g = c;
+		else {
+			var h = (e.body || e.getElementsByTagName("head")[0]).childNodes;
+			g = h[h.length - 1]
+		}
+		var i = e.styleSheets;
+		f.rel = "stylesheet", f.href = b, f.media = "only x", j(function() {
+			g.parentNode.insertBefore(f, c ? g : g.nextSibling)
+		});
+		var k = function(a) {
+			for (var b = f.href, c = i.length; c--;)
+				if (i[c].href === b) return a();
+			setTimeout(function() {
+				k(a)
+			})
+		};
+		return f.addEventListener && f.addEventListener("load", l), f.onloadcssdefined = k, k(l), f
+	};
+	"undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
+}("undefined" != typeof global ? global : this);
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+! function(a) {
+	if (a.loadCSS) {
+		var b = loadCSS.relpreload = {};
+		if (b.support = function() {
+				try {
+					return a.document.createElement("link").relList.supports("preload")
+				} catch (a) {
+					return !1
+				}
+			}, b.poly = function() {
+				for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
+					var d = b[c];
+					"preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null)
+				}
+			}, !b.support()) {
+			b.poly();
+			var c = a.setInterval(b.poly, 300);
+			a.addEventListener && a.addEventListener("load", function() {
+				b.poly(), a.clearInterval(c)
+			}), a.attachEvent && a.attachEvent("onload", function() {
+				a.clearInterval(c)
+			})
+		}
+	}
+}(this);
+    </script>
+</head>
+<body>
+    <!-- HERO -->
+
+    <div class="hero">
+        <nav>
+            <ul class="logo">
+                <li>EX</li>
+                <li><i class="fas fa-circle"></i></li>
+            </ul>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+
+        <div class="float-in-menu">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <section>
+            <h1 class="heading">Welcome to exo!</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of Lorem ipsum is that it has a more-or-less normal distribution of letters.</p>
+            <button>Learn more</button>
+        </section>
+    </div>
+
+    <!-- SHORT STORY -->
+
+    <section>
+        <div class="short-story">
+            <h1 class="blue-heading">A short story about Us!</h1>
+            <p>It is a long established fact that reader will be distracted by the readable content of the page when looking at its layout.</p>
+            <hr class="blue-hr">
+        </div>
+
+        <div class="panels">
+            <div>
+                <h1 class="blue-heading">
+                    <span class="fa-stack">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-circle fa-stack-1x"></i>
+                    </span>Creative
+                </h1>
+                <p>It is a long established fact that reader will be distracted by the readable content of the page when looking at its layout.</p>
+            </div>
+            
+            <div>
+                <h1 class="blue-heading">
+                    <span class="fa-stack">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-circle fa-stack-1x"></i>
+                    </span>Corporate
+                </h1>
+                <p>It is a long established fact that reader will be distracted by the readable content of the page when looking at its layout.</p>
+            </div>
+
+            <div>
+                <h1 class="blue-heading">
+                    <span class="fa-stack">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-circle fa-stack-1x"></i>
+                    </span>Supportive
+                </h1>
+                <p>It is a long established fact that reader will be distracted by the readable content of the page when looking at its layout.</p>
+            </div>
+        </div>
+        
+        <!-- ICONS SECTION -->
+
+        <section class="icons-background">
+                <ul class="icons">
+                    <li>
+                        <span class="fa-stack">
+                            <i class="fas fa-circle fa-stack-3x"></i>
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-desktop fa-stack-1x"></i>
+                        </span>
+                    </li>
+                    <li class="dashes">-------------</li>
+                    <li>
+                        <span class="fa-stack">
+                            <i class="fas fa-circle fa-stack-3x"></i>
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-paint-brush fa-stack-1x"></i>
+                        </span>
+                    </li>
+                    <li class="dashes">-------------</li>
+                    <li>
+                        <span class="fa-stack">
+                            <i class="fas fa-circle fa-stack-3x"></i>
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-code fa-stack-1x"></i>
+                        </span>
+                    </li>
+                </ul>
+
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+        </section>
+    </section>
+
+    <!-- VIDEO SECTION -->
+
+    <section class="video">
+        <video autoplay muted playsinline loop="true" width='100vw' height='100%' poster='images/thumbnail-mini.webp' class='lazy'>
+            <source data-src="images/video-mini.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- TEXT -->
+
+    <div class="short-story">
+        <h1 class="blue-heading">Our Featured Product</h1>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by ibelievable.</p>
+        <hr class="blue-hr">
+    </div>
+
+    <!-- PRODUCT -->
+
+    <section class="product">
+        <div class="image-container">
+            <div class="product-image"></div>
+        </div>
+        <div class="description">
+            <h1 class="blue-heading">EXO One page psd template <span class="fa fa-stack">
+                    <i class="fas fa-comment fa-stack-2x"></i>
+                    <i class="fa-stack-1x">$12</i>
+                </span>
+            </h1>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <p>45 Ratings | 231 Sales</p>
+            </div>
+            
+            <div class="text-bubbles">
+                <div class="product-info">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+
+                    <p>By injected humour or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.</p>
+
+                    <button>Live demo</button>
+                    <button>purchase now</button>
+                </div>
+
+                <div class="bubbles">
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle active-bubble"></i>
+                    <i class="fas fa-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- TEXT -->
+
+    <section>
+        <div class="short-story">
+            <h1 class="blue-heading">Client's Feedback</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which. </p>
+            <hr class="blue-hr">
+        </div>
+    </section>
+
+    <!-- FEEDBACK-->
+
+    <section class="feedback">
+        <section>
+            <div class="bubbles left">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle active-bubble"></i>
+                <i class="fas fa-circle"></i>
+            </div>
+
+            <div class="hor-flex">
+                <div class="picture-container">
+                    <div class="name">
+                        <h3>Arup Halder</h3>
+                        <h5>CEO KITTACO</h5>
+                    </div>
+                    <span class="fa-stack">
+                        <i class="fa-stack-2x fas fa-circle"></i>
+                        <div class="picture fa-stack-1x"></div>
+                    </span>
+                </div>
+                <div class="text">
+                    <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necesary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a couple of model sentence structures, to generate Lorem Ipusm which is therefore always free from repetition, injected humour or non-characteristic words etc.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- TEXT -->
+
+    <section>
+        <div class="short-story">
+            <h1 class="blue-heading">Our Efficiency</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which. </p>
+            <hr class="blue-hr">
+        </div>
+    </section>
+
+<!-- PROGRESS CHARTS -->
+
+    <section class="progress">
+        <div class="chart-text-container">
+            <div class="charts">
+                <div class="container">
+                    <div class="active-border first">
+                        <div class="circle"></div>
+                        <span id="wp">0 %</span>
+                    </div>
+                    <p>Wordpress</p>
+                </div>
+
+                <div class="container">
+                    <div class="active-border second">
+                        <div class="circle"></div>
+                        <span id="programming">0 %</span>
+                    </div>
+                    <p>Programming</p>
+                </div>
+
+                <div class="container">
+                    <div class="active-border third">
+                        <div class="circle"></div>
+                        <span id="html">0 %</span>
+                    </div>
+                    <p>HTML</p>
+                </div>
+            </div>
+
+            <div class="chart-info">
+                <h4>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</h4>
+                <p>It was popularised in 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEXT -->
+
+    <section>
+        <div class="short-story">
+            <h1 class="blue-heading">Meet the team</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which. </p>
+            <hr class="blue-hr">
+        </div>
+    </section>
+
+    <!-- MEET JOHN DOE -->
+
+    <section class="meet">
+        <div class="flex">
+            <div class="about">
+                <h3>John Smith Doe</h3>
+                <h4>Co-Founder</h4>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
+                <p>by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                <button>Learn moew</button>
+                <div class="bubbles-horizontal">
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                </div>
+            </div>
+
+            <div class="photo-container">
+                <div class="photo-border">
+                    <div class="photo"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEXT -->
+
+    <section>
+        <div class="short-story">
+            <h1 class="blue-heading">Meet the team</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which. </p>
+            <hr class="blue-hr">
+        </div>
+    </section>
+
+    <!-- CROUSEL -->
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel1"></div>
+            <div class="carousel2"></div>
+            <div class="carousel3"></div>
+        </div>
+    </section>
+
+    <!-- TEXT -->
+
+    <section>
+        <div class="short-story">
+            <h1 class="blue-heading">Get in touch</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which. </p>
+            <hr class="blue-hr">
+        </div>
+    </section>
+
+    <!-- FORM -->
+
+    <section class="form">
+        <div class="flex">
+            <div class="top-item">
+                <i class="fas fa-mobile-alt"></i>
+                <div class="contacts">
+                    <p>+370 (625) 841 71</p>
+                    <p>+370 (625) 841 71</p>
+                </div>
+            </div>
+
+            <div class="top-item">
+                <i class="fas fa-envelope"></i>
+                <div class="contacts">
+                    <p>gplonis@gmail.com</p>
+                    <p>plonis.g@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="top-item">
+                <i class="fas fa-home"></i>
+                <div class="contacts">
+                    <p>Vilnius</p>
+                    <p>Lithuania</p>
+                </div>
+            </div>
+        </div>
+
+        <form method='GET' action="#">
+            <div class="flex">
+                <input type="text" placeholder="Name" name="name">
+                <input type="number" placeholder="Phone" name="phone">
+                <input type="email" placeholder="Email" name="email">
+            </div>
+
+            <div class="flex message">
+                <textarea placeholder="Message..." name="message"></textarea>
+                <input type="submit" value="SEND MAIL">
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER TOP -->
+
+    <section class="footer-top">
+        <div class="flex">
+            <div>
+                <span>EX</span><i class="fas fa-circle"></i>
+            </div>
+            <p>It is a long established fact that a reader will be distracted.</p>
+            <div class="footer-dashes"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER BOTTOM -->
+
+    <section class="footer-bottom">
+        <div class="flex">
+            <p>Designed by Arup Haldar © Made by Gintautas Plonis 2018</p>
+            <ul>
+                <li><a href="https://www.facebook.com/gintautas.plonis">
+                    <span class="fa fa-stack">
+                        <i class="far fa-circle facebook fa-stack-2x"></i>
+                        <i class="fab fa-facebook-f facebook fa-stack-1x"></i>
+                    </span>
+                </a></li>
+                <li><a href="https://www.twitter.com">
+                        <span class="fa fa-stack">
+                            <i class="far fa-circle twitter fa-stack-2x"></i>
+                            <i class="fab fa-twitter twitter fa-stack-1x"></i>
+                        </span>
+                </a></li>
+                <li><a href="https://www.behance.net/gallery/37061865/Freebie-EXO-One-page-PSD-Theme">
+                        <span class="fa fa-stack">
+                            <i class="far fa-circle behance fa-stack-2x"></i>
+                            <i class="fab fa-behance behance fa-stack-1x"></i>
+                        </span>
+                </a></li>
+                <li><a href="https://dribbble.com">
+                        <span class="fa fa-stack">
+                            <i class="far fa-circle dribbble fa-stack-2x"></i>
+                            <i class="fab fa-dribbble dribbble fa-stack-1x"></i>
+                        </span>
+                </a></li>
+                <li><a href="https://www.linkedin.com/in/gintautas-plonis/">
+                        <span class="fa fa-stack">
+                            <i class="far fa-circle linkedin fa-stack-2x"></i>
+                            <i class="fab fa-linkedin linkedin fa-stack-1x"></i>
+                        </span>
+                </a></li>
+                <li><a href="https://www.pinterest.com">
+                        <span class="fa fa-stack">
+                            <i class="far fa-circle pinterest fa-stack-2x"></i>
+                            <i class="fab fa-pinterest-p pinterest fa-stack-1x"></i>
+                        </span>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
