@@ -687,6 +687,34 @@ body::-webkit-scrollbar-thumb {
   body::-webkit-scrollbar-thumb:active {
     background: rgba(0, 0, 0, 0.5); }
 
+.up {
+  border: 2px solid white;
+  position: fixed;
+  top: 85vh;
+  left: 93vw;
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(128deg, #FA4DFE -3%, #6411FD);
+  font-weight: 800;
+  padding: 20px;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.3s; }
+  .up:hover {
+    opacity: 0.8; }
+
+.slide {
+  animation: slide 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5); }
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    left: 100vw; }
+  50% {
+    left: 91vw; }
+  to {
+    opacity: 1;
+    left: 93vw; } }
 @media only screen and (max-width: 1066px) {
   .chart-info {
     max-width: 100%;
@@ -698,7 +726,9 @@ body::-webkit-scrollbar-thumb {
   .footer-bottom .flex {
     justify-content: center; } }
 @media only screen and (max-width: 1050px) {
-  background: url("../images/medium/carousel3.webp");
+  .carousel3 {
+    background: url("../images/medium/carousel3.webp"); }
+
   .carousel2 {
     background: url("../images/medium/carousel2.webp"); }
 
@@ -708,7 +738,9 @@ body::-webkit-scrollbar-thumb {
   .form {
     width: 100%; } }
 @media only screen and (max-width: 769px) {
-  background: url("../images/sm/carousel3.webp");
+  .carousel3 {
+    background: url("../images/sm/carousel3.webp"); }
+
   .carousel2 {
     background: url("../images/sm/carousel2.webp"); }
 

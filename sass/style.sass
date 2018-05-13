@@ -772,6 +772,37 @@ body::-webkit-scrollbar-thumb
     &:active 
         background: rgba(0, 0, 0, .5)
 
+.up 
+    border: 2px solid white 
+    position: fixed
+    top: 85vh
+    left: 93vw
+    border-radius: 15px
+    color: white
+    background: linear-gradient(128deg, #FA4DFE -3%, #6411FD)
+    font-weight: 800
+    padding: 20px
+    cursor: pointer
+    display: none
+    transition: opacity .3s
+
+    &:hover 
+        opacity: .8
+
+.slide 
+    animation: slide .5s cubic-bezier(.17,.67,.48,.5)
+
+@keyframes slide 
+    from 
+        opacity: 0
+        left: 100vw
+
+    50% 
+        left: 91vw
+
+    to 
+        opacity: 1
+        left: 93vw
 
 
 // MEDIA QUERIES ===============================================================================
@@ -789,7 +820,7 @@ body::-webkit-scrollbar-thumb
 
 @media only screen and (max-width: 1050px) 
     .carousel3
-    background: url('../images/medium/carousel3.webp')
+        background: url('../images/medium/carousel3.webp')
 
     .carousel2 
         background: url('../images/medium/carousel2.webp')
@@ -803,7 +834,7 @@ body::-webkit-scrollbar-thumb
 
 @media only screen and (max-width: 769px) 
     .carousel3
-    background: url('../images/sm/carousel3.webp')
+        background: url('../images/sm/carousel3.webp')
 
     .carousel2 
         background: url('../images/sm/carousel2.webp')

@@ -11,6 +11,8 @@ let burger=document.querySelector(".burger"),
     bounding=progress.getBoundingClientRect(),
     carouselSpin;
     video=document.querySelector('video'),
+    learn=document.querySelector('.hero section button'),
+    up=document.querySelector('.up'),
     //menu buttons
     home=document.querySelector('#home'),
     about=document.querySelector('#about'),
@@ -31,7 +33,22 @@ let burger=document.querySelector(".burger"),
     meetDiv=document.querySelector('.meet'),
     carouselDiv=document.querySelector('.carousel');
 
-    //scroll to menu elements
+
+learn.addEventListener('click', function(){
+    alert("Hey, it's just a sample website!");
+})
+
+//display up button
+window.addEventListener('scroll',function(){
+    if(window.pageYOffset>heroContainer.clientHeight){
+        up.style.display='block';
+        up.classList.add('slide');
+    }else{
+        up.style.display='none';
+    }
+})
+
+//scroll to menu elements
 about.addEventListener('click',function(e){
     e.stopPropagation();
     e.preventDefault();
@@ -82,7 +99,8 @@ contact.addEventListener('click',function(e){
     });
 })
 
-    document.addEventListener("DOMContentLoaded", function() {//lazy load video for all browsers
+//lazy load video for all browsers
+    document.addEventListener("DOMContentLoaded", function() {
         var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
       
         if ("IntersectionObserver" in window) {
@@ -109,7 +127,8 @@ contact.addEventListener('click',function(e){
         }
       });
 
-function toggleMenu(){//toggle menu icon on small devices
+//toggle menu icon on small devices
+function toggleMenu(){
     if(menu.classList.contains("menu-visible")){
         menu.classList.remove("menu-visible");
         burger.innerHTML="<i class='fas fa-bars'></i>";
@@ -123,7 +142,8 @@ function toggleMenu(){//toggle menu icon on small devices
 
 burger.addEventListener("click", toggleMenu);
 
-for(let i=0;i<menuTabs.length;i++){//change menu tab's font weight on click
+//change menu tab's font weight on click
+for(let i=0;i<menuTabs.length;i++){
     menuTabs[i].addEventListener('click', function(){
         for(let i=0;i<menuTabs.length;i++){//reset all menu tabs to normal
             menuTabs[i].style.fontWeight='300';
@@ -132,7 +152,8 @@ for(let i=0;i<menuTabs.length;i++){//change menu tab's font weight on click
     })
 }
 
-setInterval(function(){//spin carousel every 8s
+//spin carousel every 8s
+setInterval(function(){
     if(width<300){
         carousel.style.right = width+'vw';
         width+=100;
@@ -147,6 +168,7 @@ let numWp=0,
     numProgramming=0,
     numHtml=0;
 
+
 //count percentage to specified number
 function counterWp(){
     wp.textContent=numWp+' %';
@@ -155,6 +177,7 @@ function counterWp(){
     }
 }
 
+//count percent for programming skill
 function counterProgramming(){
     programming.textContent=numProgramming+' %';
     if(numProgramming<63){
@@ -162,6 +185,7 @@ function counterProgramming(){
     }
 }
 
+//count percentage for html skill
 function counterHtml(){
     html.textContent=numHtml+' %';
     if(numHtml<90){
@@ -170,9 +194,9 @@ function counterHtml(){
 }
 
 // check if elements are in view
-
 window.addEventListener('scroll', function(){
-    function isInViewport(element) {//define helper function to check if element is in view
+    //define helper function to check if element is in view
+    function isInViewport(element) {
         var rect = element.getBoundingClientRect();
         var html = document.documentElement;
         return (
@@ -183,13 +207,12 @@ window.addEventListener('scroll', function(){
         );
       }
 
+      //count percentage if in view
       if(isInViewport(progress)){
-            setInterval(function(){//count percentage if in view
+            setInterval(function(){
                 counterWp();
                 counterHtml();
                 counterProgramming();
             }, 150);
       };
 })
-
-// Lazy loading images
