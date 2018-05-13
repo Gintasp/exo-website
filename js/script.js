@@ -41,11 +41,23 @@ learn.addEventListener('click', function(){
 //display up button
 window.addEventListener('scroll',function(){
     if(window.pageYOffset>heroContainer.clientHeight){
-        up.style.display='block';
         up.classList.add('slide');
     }else{
-        up.style.display='none';
+        up.classList.remove('slide');
     }
+})
+
+//scroll back to top
+up.addEventListener('click',function(){
+    window.scroll({
+        top:0,
+        left:0,
+        behavior:'smooth'
+    });
+    up.classList.add('hide');
+    setTimeout(function(){
+        up.classList.remove('hide');
+    },500)
 })
 
 //scroll to menu elements

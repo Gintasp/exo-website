@@ -691,21 +691,36 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid white;
   position: fixed;
   top: 85vh;
-  left: 93vw;
-  border-radius: 15px;
+  left: 100vw;
+  border-radius: 50%;
+  z-index: 1;
   color: white;
-  background: linear-gradient(128deg, #FA4DFE -3%, #6411FD);
+  background: #6400f4;
   font-weight: 800;
-  padding: 20px;
-  cursor: pointer;
-  display: none;
-  transition: opacity 0.3s; }
+  padding: 20px 25px;
+  font-size: 22px;
+  cursor: pointer; }
   .up:hover {
+    transition: opacity 0.3s;
     opacity: 0.8; }
 
 .slide {
-  animation: slide 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5); }
+  animation: slide 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5);
+  left: 93vw; }
 
+.hide {
+  animation: hide 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5);
+  left: 100vw; }
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    left: 93vw; }
+  50% {
+    left: 91vw; }
+  to {
+    opacity: 0;
+    left: 100vw; } }
 @keyframes slide {
   from {
     opacity: 0;
