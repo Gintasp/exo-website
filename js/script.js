@@ -10,7 +10,40 @@ let burger=document.querySelector(".burger"),
     progress=document.querySelector('.progress'),
     bounding=progress.getBoundingClientRect(),
     carouselSpin;
-    video=document.querySelector('video');
+    video=document.querySelector('video'),
+    //menu buttons
+    about=document.querySelector('#about'),
+    services=document.querySelector('#services'),
+    //page sections
+    aboutDiv=document.querySelector('#about-div'),
+    heroContainer=document.querySelector('.hero'),
+    servicesDiv=document.querySelector('.product'),
+    shortStoryDiv=document.querySelector('.short-story'),
+    panelsDiv=document.querySelector('.panels'),
+    iconsDiv=document.querySelector('.icons-background'),
+    videoDiv=document.querySelector('.video'),
+    productDiv=document.querySelector('.product');
+
+    //scroll to menu elements
+about.addEventListener('click',function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    window.scroll({
+        top:heroContainer.clientHeight,
+        left:0,
+        behavior:"smooth"
+    });
+})
+
+services.addEventListener('click',function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    window.scroll({
+        top:heroContainer.clientHeight+document.querySelector('.short-story').clientHeight+document.querySelector('.icons-background').clientHeight+document.querySelector('.video').clientHeight+document.querySelector('.panels').clientHeight+2,
+        left:0,
+        behavior:"smooth"
+    });
+})
 
     document.addEventListener("DOMContentLoaded", function() {//lazy load video for all browsers
         var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
@@ -121,5 +154,3 @@ window.addEventListener('scroll', function(){
             }, 150);
       };
 })
-
-// Lazy loading images
