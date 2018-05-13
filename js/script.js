@@ -12,8 +12,12 @@ let burger=document.querySelector(".burger"),
     carouselSpin;
     video=document.querySelector('video'),
     //menu buttons
+    home=document.querySelector('#home'),
     about=document.querySelector('#about'),
     services=document.querySelector('#services'),
+    portfolio=document.querySelector('#portfolio'),
+    blog=document.querySelector('#blog'),
+    contact=document.querySelector('#contact'),
     //page sections
     aboutDiv=document.querySelector('#about-div'),
     heroContainer=document.querySelector('.hero'),
@@ -22,7 +26,10 @@ let burger=document.querySelector(".burger"),
     panelsDiv=document.querySelector('.panels'),
     iconsDiv=document.querySelector('.icons-background'),
     videoDiv=document.querySelector('.video'),
-    productDiv=document.querySelector('.product');
+    productDiv=document.querySelector('.product'),
+    feedbackDiv=document.querySelector('.product'),
+    meetDiv=document.querySelector('.meet'),
+    carouselDiv=document.querySelector('.carousel');
 
     //scroll to menu elements
 about.addEventListener('click',function(e){
@@ -39,7 +46,37 @@ services.addEventListener('click',function(e){
     e.stopPropagation();
     e.preventDefault();
     window.scroll({
-        top:heroContainer.clientHeight+document.querySelector('.short-story').clientHeight+document.querySelector('.icons-background').clientHeight+document.querySelector('.video').clientHeight+document.querySelector('.panels').clientHeight+2,
+        top:heroContainer.clientHeight+shortStoryDiv.clientHeight+iconsDiv.clientHeight+videoDiv.clientHeight+panelsDiv.clientHeight+2,
+        left:0,
+        behavior:"smooth"
+    });
+})
+
+portfolio.addEventListener('click',function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    window.scroll({
+        top:heroContainer.clientHeight+shortStoryDiv.clientHeight+iconsDiv.clientHeight+videoDiv.clientHeight+panelsDiv.clientHeight+2+shortStoryDiv.clientHeight,
+        left:0,
+        behavior:"smooth"
+    });
+})
+
+blog.addEventListener('click',function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    window.scroll({
+        top:heroContainer.clientHeight+iconsDiv.clientHeight+videoDiv.clientHeight+panelsDiv.clientHeight+2+4*shortStoryDiv.clientHeight+productDiv.clientHeight+feedbackDiv.clientHeight,
+        left:0,
+        behavior:"smooth"
+    });
+})
+
+contact.addEventListener('click',function(e){
+    e.stopPropagation();
+    e.preventDefault();
+    window.scroll({
+        top:heroContainer.clientHeight+iconsDiv.clientHeight+videoDiv.clientHeight+panelsDiv.clientHeight+2+7*shortStoryDiv.clientHeight+productDiv.clientHeight+feedbackDiv.clientHeight+carouselDiv.clientHeight+meetDiv.clientHeight,
         left:0,
         behavior:"smooth"
     });
@@ -72,7 +109,7 @@ services.addEventListener('click',function(e){
         }
       });
 
-function toggleMenu(){//toggle menu on small devices
+function toggleMenu(){//toggle menu icon on small devices
     if(menu.classList.contains("menu-visible")){
         menu.classList.remove("menu-visible");
         burger.innerHTML="<i class='fas fa-bars'></i>";
@@ -154,3 +191,5 @@ window.addEventListener('scroll', function(){
             }, 150);
       };
 })
+
+// Lazy loading images
