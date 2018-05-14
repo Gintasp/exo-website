@@ -1,6 +1,6 @@
 # Welcome to EXO!
 
-EXO is my first real world website made from a psd mockup (www.behance.net/gallery/37061865/Freebie-EXO-One-page-PSD-Theme, credits go to Arup Haldar). EXO is made entirely for educational purposes, anyone can use this code for their personal needs. View EXO at [EXO on Github](https://gintasp.github.io/exo-website/ "EXO").
+EXO is my first real world website made from a psd mockup ([link to Behance](www.behance.net/gallery/37061865/Freebie-EXO-One-page-PSD-Theme), credits go to Arup Haldar). EXO is made entirely for educational purposes, anyone can use this code for their personal needs. View EXO at [EXO on Github](https://gintasp.github.io/exo-website/ "EXO").
 
 # Features
 
