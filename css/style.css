@@ -502,13 +502,13 @@ video {
     transition: all 0.5s; }
 
 .carousel3 {
-  background: url("../images/original/carousel3.webp"); }
+  background: url("../images/large/carousel1.png"); }
 
 .carousel2 {
-  background: url("../images/original/carousel2.webp"); }
+  background: url("../images/large/carousel2.png"); }
 
 .carousel1 {
-  background: url("../images/original/carousel1.webp"); }
+  background: url("../images/large/carousel3.png"); }
 
 .form {
   padding: 12vh 10vw;
