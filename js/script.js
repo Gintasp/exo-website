@@ -153,6 +153,7 @@ function toggleMenu(){
 }
 
 burger.addEventListener("click", toggleMenu);
+burger.addEventListener("touchend", toggleMenu);
 
 //change menu tab's font weight on click
 for(let i=0;i<menuTabs.length;i++){
