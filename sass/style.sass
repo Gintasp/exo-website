@@ -45,6 +45,7 @@ button
 
     section 
         width: 60%
+        max-width: 750px
         margin: 0 auto
         padding-top: 30vh
         text-align: center
@@ -761,9 +762,6 @@ textarea
     &:hover 
         background: rgba(255, 255, 255, .2)
 
-.menu-visible 
-    right: 0
-
     .menu 
         display: flex
         flex-direction: column
@@ -918,7 +916,7 @@ body::-webkit-scrollbar-thumb
 @media only screen and (max-width: 600px) 
     .hero 
         section 
-            padding-top: 28vh
+            padding-top: 13vh
 
             button 
                 margin-top: 20px
@@ -999,6 +997,9 @@ body::-webkit-scrollbar-thumb
 @media only screen and (min-width: 600px) 
     .float-in-menu 
         right: 100vw
+
+    .menu-visible 
+        right: 0
 
     .hero section 
         left: 0 !important

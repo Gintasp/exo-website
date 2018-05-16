@@ -40,6 +40,7 @@ button {
   background: linear-gradient(128deg, #FA4DFE -3%, #6411FD); }
   .hero section {
     width: 60%;
+    max-width: 750px;
     margin: 0 auto;
     padding-top: 30vh;
     text-align: center;
@@ -676,10 +677,7 @@ textarea {
   cursor: pointer; }
   .burger:hover {
     background: rgba(255, 255, 255, 0.2); }
-
-.menu-visible {
-  right: 0; }
-  .menu-visible .menu {
+  .burger .menu {
     display: flex;
     flex-direction: column; }
 
@@ -810,7 +808,7 @@ body::-webkit-scrollbar-thumb {
     margin-left: 0; } }
 @media only screen and (max-width: 600px) {
   .hero section {
-    padding-top: 28vh; }
+    padding-top: 13vh; }
     .hero section button {
       margin-top: 20px; }
     .hero section p {
@@ -881,6 +879,9 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (min-width: 600px) {
   .float-in-menu {
     right: 100vw; }
+
+  .menu-visible {
+    right: 0; }
 
   .hero section {
     left: 0 !important;

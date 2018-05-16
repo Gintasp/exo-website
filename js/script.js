@@ -140,20 +140,20 @@ contact.addEventListener('click',function(e){
       });
 
 //toggle menu icon on small devices
-function toggleMenu(){
-    if(menu.classList.contains("menu-visible")){
-        menu.classList.remove("menu-visible");
-        burger.innerHTML="<i class='fas fa-bars'></i>";
-        hero.style.left="0";
-    }else{
-        menu.classList.add("menu-visible");
+let hidden=true;
+burger.addEventListener("click", function(){
+    if(hidden==true){
+        menu.style.right='0';
         burger.innerHTML="<i class='fas fa-times'></i>";
         hero.style.left="100vw";
+        hidden=false;
+    }else{
+        menu.style.right='100vw';
+        burger.innerHTML="<i class='fas fa-bars'></i>";
+        hero.style.left="0";
+        hidden=true;
     }
-}
-
-burger.addEventListener("click", toggleMenu);
-burger.addEventListener("touchend", toggleMenu);
+});
 
 //change menu tab's font weight on click
 for(let i=0;i<menuTabs.length;i++){
