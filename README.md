@@ -17,6 +17,7 @@ EXO is my first real world website made from a psd mockup ([link to Behance](www
 11. Optimized rendering.
 12. Viewport-position responsive number counters.
 13. Scroll to menu items functionality.
+14. Custom srollbar for desktop browsers.
 
 # Summary
 
