@@ -222,7 +222,7 @@ video {
     width: 30%;
     min-height: 300px; }
     .product .image-container .product-image {
-      background-image: url("../images/large/product.png");
+      background-image: url("../images/large/product.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -691,7 +691,7 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid white;
   position: fixed;
   top: 85vh;
-  left: 100%;
+  left: 110%;
   border-radius: 50%;
   z-index: 1;
   color: white;
@@ -710,26 +710,26 @@ body::-webkit-scrollbar-thumb {
 
 .hide {
   animation: hide 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5);
-  left: 100%; }
+  left: 110%; }
 
 @keyframes hide {
   from {
     opacity: 1;
-    left: 93vw; }
+    left: 93%; }
   50% {
-    left: 91vw; }
+    left: 91%; }
   to {
     opacity: 0;
-    left: 100vw; } }
+    left: 110%; } }
 @keyframes slide {
   from {
     opacity: 0;
-    left: 100vw; }
+    left: 110%; }
   50% {
-    left: 91vw; }
+    left: 91%; }
   to {
     opacity: 1;
-    left: 93vw; } }
+    left: 93%; } }
 @keyframes hideSmall {
   from {
     opacity: 1;
@@ -738,11 +738,11 @@ body::-webkit-scrollbar-thumb {
     left: 91%; }
   to {
     opacity: 0;
-    left: 100%; } }
+    left: 110%; } }
 @keyframes slideSmall {
   from {
     opacity: 0;
-    left: 100%; }
+    left: 110%; }
   50% {
     left: 85%; }
   to {
@@ -756,11 +756,11 @@ body::-webkit-scrollbar-thumb {
     left: 85%; }
   to {
     opacity: 0;
-    left: 100%; } }
+    left: 110%; } }
 @keyframes slideMini {
   from {
     opacity: 0;
-    left: 100%; }
+    left: 110%; }
   50% {
     left: 75%; }
   to {
@@ -789,7 +789,7 @@ body::-webkit-scrollbar-thumb {
 
   .hide {
     animation: hideSmall 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5);
-    left: 100%; } }
+    left: 110%; } }
 @media only screen and (max-width: 1050px) {
   .carousel3 {
     background: url("../images/medium/carousel3.png"); }
@@ -859,7 +859,7 @@ body::-webkit-scrollbar-thumb {
 
   .hide {
     animation: hideMini 0.5s cubic-bezier(0.17, 0.67, 0.48, 0.5);
-    left: 100%; }
+    left: 110%; }
 
   .hero section {
     padding-top: 13vh; }

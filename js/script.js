@@ -139,18 +139,18 @@ contact.addEventListener('click',function(e){
         }
       });
 
-//toggle menu icon on small devices
+//toggle menu icon on small devices with jQuery
 let hidden=true;
-burger.addEventListener("click", function(){
+$('.burger').on("click", function(){
     if(hidden==true){
-        menu.style.right='0';
-        burger.innerHTML="<i class='fas fa-times'></i>";
-        hero.style.left="100vw";
+        $('.float-in-menu').css('right','0');
+        $('.burger').html("<i class='fas fa-times'></i>");
+        $('.hero section').css('left','100vw');
         hidden=false;
     }else{
-        menu.style.right='100vw';
-        burger.innerHTML="<i class='fas fa-bars'></i>";
-        hero.style.left="0";
+        $('.float-in-menu').css('right','100vw');
+        $('.burger').html("<i class='fas fa-bars'></i>");
+        $('.hero section').css('left','');
         hidden=true;
     }
 });
