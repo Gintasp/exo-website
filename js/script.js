@@ -141,7 +141,7 @@ contact.addEventListener('click',function(e){
 
 //toggle menu icon on small devices with jQuery
 let hidden=true;
-$('.burger').on("click", function(){
+$('.burger').on("click touchstart", function(){
     if(hidden==true){
         $('.float-in-menu').css('right','0');
         $('.burger').html("<i class='fas fa-times'></i>");
